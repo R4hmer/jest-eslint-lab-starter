@@ -6,9 +6,11 @@
  * @param {string} input - The input string.
  * @returns {string} - The formatted string.
  */
+
 function capitalizeWords(input) {
-    return input.replace(/\b\w/g, char => char.toUpperCase());
+    return input.replace(/(?:^|[^a-zA-Z0-9])\w/g, char => char.toUpperCase());
 }
+
 
 /**
  * Filters active users from the array.
